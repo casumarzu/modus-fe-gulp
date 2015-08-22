@@ -1,0 +1,11 @@
+doctype html
+html(lang="en")
+  head
+    -pageTitle= 'example page'
+    link(rel="shortcut icon", href="/images/favicon.gif?")
+    title= pageTitle
+    link(rel="stylesheet", href='/styles/index.css')
+    script(src="/bower_components/modernizr/modernizr.js")
+  body
+    block content
+    script(src="/scripts/bundle.js")

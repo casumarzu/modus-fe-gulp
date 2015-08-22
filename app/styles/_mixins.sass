@@ -1,0 +1,63 @@
+
+=inline-block
+  display: inline
+  zoom: 1
+  display: inline-block
+
+=border-box
+  box-sizing: border-box
+
+=font-install ($path)
+  $path-inner: "fonts/#{$path}"
+  @font-face
+    font-family: $path
+    src: url("#{$path-inner}.eot")
+    src: url("#{$path-inner}.eot?#iefix") format("embedded-opentype"), url("#{$path-inner}.woff2") format("woff2"), url("#{$path-inner}.woff") format("woff"), url("#{$path-inner}.ttf") format("truetype")
+    font-weight: normal
+    font-style: normal
+
+=keyframes($name)
+  @-webkit-keyframes #{$name}
+    @content
+  @-moz-keyframes #{$name}
+    @content
+  @-ms-keyframes #{$name}
+    @content
+  @keyframes #{$name}
+    @content
+
+// example keyframes
+
+// +keyframes(zoomInFromOut)
+//   0%
+//     display: block
+//     opacity: 0
+//     visibility: visible
+//     transform: scale(5)
+//     -webkit-transition-timing-function: ease-in-out
+//     transition-timing-function: ease-in-out
+//   75%
+//     opacity: .3
+//     -webkit-transition-timing-function: ease-in-out
+//     transition-timing-function: ease-in-out
+//   100%
+//     opacity: 1
+//     transform: scale(1)
+//     -webkit-transition-timing-function: ease-in-out
+//     transition-timing-function: ease-in-out
+
+// .zoomInFromOut
+//   -webkit-animation-duration: .8s
+//   animation-duration: .8s
+//   -webkit-animation-name: zoomInFromOut
+//   animation-name: zoomInFromOut
+
+=placeholder
+  &::-webkit-input-placeholder
+    @content
+  &::-moz-placeholder
+    @content
+  &:-moz-placeholder
+    @content
+  &:-ms-input-placeholder
+    @content

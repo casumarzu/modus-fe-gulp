@@ -1,0 +1,10 @@
+extends ./_base.jade
+block content
+  h1 hello its flex
+  mixin items(count)
+    - for (var i = 1; i <= count; i++)
+      .flex-item= i
+  .flex-container
+    +items(6)
+
+

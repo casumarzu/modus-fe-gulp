@@ -1,0 +1,22 @@
+extends ./_base.jade
+block content
+  h1.beauty-shadow Some text
+  h2 Some text
+  h3 Some text
+  h4 Some text
+
+  .flex-block
+    .flex-item-1
+    .flex-item-2
+    .flex-item-3
+  script
+    :coffee
+      class Page
+        constructor:(@page)->
+          console.log "page #{@page}"
+
+      class IndexPage extends Page
+
+      indexPage = new IndexPage 'index'
+
+

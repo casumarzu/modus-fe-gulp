@@ -1,0 +1,31 @@
+{
+  "name": "test",
+  "version": "0.1.0",
+  "authors": [
+    "andrey <andrey.ivanov@saltpepper.ru>"
+  ],
+  "description": "test",
+  "main": "test",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "directory": "app/",
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "underscore": "~1.7.0",
+    "backbone": "~1.1.2",
+    "requirejs": "~2.1.15",
+    "epoxy": "~0.4.1",
+    "bootstrap-sass": "~3.0.2",
+    "fabric": "~1.5.0",
+    "modernizr": "~2.8.3",
+    "reset-css": "~2.0.20110126",
+    "animate.css": "~3.3.0",
+    "marionette": "~2.4.1"
+  }
+}

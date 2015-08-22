@@ -1,0 +1,12 @@
+h1 {{title}}
+button(ng-click="alert()") alert
+button(ng-click="incr()") +
+button(ng-click="incrRandom()") +!?
+button(ng-click="decr()") -
+button(ng-click="toZero()") 1
+h3 {{num}}
+h4(ng-if="odd") Odd
+h4(ng-if="!odd") Even
+
+ul
+  li(ng-repeat="item in listExp"): a(ng-click="alarm(item.random)") {{item.name}}

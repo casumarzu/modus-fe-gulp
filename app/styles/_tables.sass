@@ -1,0 +1,67 @@
+.dis-table
+  display: table
+.dis-table-row
+  display: table-row
+.dis-table-cell
+  display: table-cell
+
+
+.table-block
+  $white: rgba(150, 130, 30, 0.75)
+  $black: rgba(150, 130, 130, 0.75)
+  $grey: rgb(150, 150, 150)
+  width: 100%
+  height: 400px
+  .exp-block
+    box-sizing: border-box
+    width: 100%
+    height: 100%
+    font-size: 5rem
+    padding: 20rem
+
+  tr, .dis-table-row
+    &:nth-child(2n + 1)
+      td, .dis-table-cell
+        &:nth-child(2n + 1)
+          background: $white
+        &:nth-child(2n)
+          background: $black
+    &:nth-child(2n)
+      td, .dis-table-cell
+        &:nth-child(2n + 1)
+          background: $black
+        &:nth-child(2n)
+          background: $white
+
+  td, .dis-table-cell
+    text-align: center
+    vertical-align: middle
+    border: 2px solid $black
+    transition: transform .3s ease, background .3s ease
+    position: relative
+    cursor: pointer
+    &:before, &:after
+      content: ''
+      display: block
+      width: 1rem
+      height: 1rem
+      position: absolute
+      border-radius: 100px
+      top: 50%
+      margin: -0.5rem 0 0 0
+      opacity: 0
+      transition: all .75s ease
+      background: $white
+    &:before
+      transform: translateX(-2rem) scale(0.5)
+      left: 0
+    &:after
+      transform: translateX(2rem) scale(0.5)
+      right: 0
+    &:hover
+      transform: scale(1.5)
+      background: $grey !important
+      z-index: 999
+      &:before, &:after
+        opacity: 1
+        transform: translateX(0)

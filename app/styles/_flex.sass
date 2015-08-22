@@ -1,0 +1,26 @@
+.flex-container
+  display: flex
+  flex: 2 10px 3 20px
+  flex-flow: row wrap
+  justify-content: space-around
+  // justify-content: space-between
+
+.flex-item
+  width: 100px
+  height: 100px
+  text-align: center
+  font-size: 10rem
+  background: black
+  // margin: 10px
+  @for $i from 1 through 12
+    $increment: #{1 + $i}rem
+    &:nth-child(6n + #{$i})
+      font-size: $increment
+
+  =colors($colors)
+    @each $color in $colors
+      $i: index($colors, $color)
+      &:nth-child(6n + #{$i})
+        background: $color
+
+  +colors(red orange yellow green blue purple)
